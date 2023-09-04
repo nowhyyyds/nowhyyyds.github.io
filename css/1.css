@@ -8,15 +8,15 @@
 .outout {
     position: absolute;
     z-index: 1;
-    width: 2600PX;
-    height: 1500PX;
+    width: 2650PX;
+    height: 1700PX;
 }
 
 .date {
     position: absolute;
     z-index: 2;
     font-size: 60px;
-    margin-top: 1470px;
+    margin-top: 1870px;
     width: 1500px;
     text-align: center;
 }
