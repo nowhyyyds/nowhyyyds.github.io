@@ -1,6 +1,6 @@
 .out {
-    height: 2600px;
-    width: 1500px;
+    height: 2700px;
+    width: 1700px;
     background-color: rgb(247, 248, 249);
     margin: 0 auto;
 }
@@ -8,7 +8,7 @@
 .outout {
     position: absolute;
     z-index: 1;
-    width: 2650PX;
+    width: 2700PX;
     height: 1700PX;
 }
 
@@ -16,12 +16,12 @@
     position: absolute;
     z-index: 2;
     font-size: 60px;
-    margin-top: 1870px;
-    width: 1500px;
+    margin-top: 1800px;
+    width: 1700px;
     text-align: center;
 }
 
 #myimg {
-    width: 1500px;
-    height: 2600px;
+    width: 1700px;
+    height: 2700px;
 }
