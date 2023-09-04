@@ -1,0 +1,27 @@
+.out {
+    height: 2250px;
+    width: 1170px;
+    background-color: rgb(247, 248, 249);
+    margin: 0 auto;
+}
+
+.outout {
+    position: absolute;
+    z-index: 1;
+    width: 2250PX;
+    height: 1170PX;
+}
+
+.date {
+    position: absolute;
+    z-index: 2;
+    font-size: 60px;
+    margin-top: 1470px;
+    width: 1170px;
+    text-align: center;
+}
+
+#myimg {
+    width: 1170px;
+    height: 2250px;
+}
