@@ -1,7 +1,7 @@
 .out {
     height: 3200px;
     width: 1650px;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(247, 248, 249);
     margin: 0 auto;
 }
 
@@ -19,6 +19,7 @@
     margin-top: 2050px;
     width: 1650px;
     text-align: center;
+    background-color: rgb(255, 0, 0); 
 }
 
 #myimg {
