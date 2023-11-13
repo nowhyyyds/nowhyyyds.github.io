@@ -1,4 +1,5 @@
 .out {
+    position: relative;  
     height: 3200px;
     width: 1650px;
     background-color: rgb(247, 248, 249);
@@ -15,11 +16,14 @@
 .date {
     position: absolute;
     z-index: 2;
-    font-size: 80px;
-    margin-top: 2050px;
-    width: 1650px;
+    font-size: 170px;
+    width: 1500px;
     text-align: center;
-    background-color: rgb(255, 0, 0); 
+    writing-mode: vertical-rl; 
+    white-space: nowrap; 
+    bottom: 5px;  
+    color: rgb(224, 26, 26); 
+
 }
 
 #myimg {
