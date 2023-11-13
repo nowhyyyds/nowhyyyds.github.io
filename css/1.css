@@ -1,6 +1,7 @@
 .out {
-    height: 3100px;
-    width: 1550px;
+    position: relative;
+    height: 3200px;
+    width: 1650px;
     background-color: rgb(247, 248, 249);
     margin: 0 auto;
 }
@@ -8,18 +9,18 @@
 .outout {
     position: absolute;
     z-index: 1;
-    width: fit-content;
-    height: fit-content;
+    width: 1650px;
+    height: 3200px;
 }
 
 .date {
     transition:color ls;
     position: absolute;
     z-index: 2;
-    font-size: 130px;
+    font-size: 100px;
     color:red;
-    margin-left: 500px;
-    margin-top: 70px;
+    margin-left: -550px;
+    margin-top: -10px;
     text-align: center;
     letter-spacing:0.05em;
     height: 3200px;
