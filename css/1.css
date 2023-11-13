@@ -1,5 +1,4 @@
 .out {
-    position: relative;  
     height: 3200px;
     width: 1650px;
     background-color: rgb(247, 248, 249);
@@ -9,24 +8,25 @@
 .outout {
     position: absolute;
     z-index: 1;
-    width: 1650PX;
-    height: 3200PX;
+    width: fit-content;
+    height: fit-content;
 }
 
 .date {
+    transition:color ls;
     position: absolute;
     z-index: 2;
     font-size: 170px;
+    color:red;
     width: 1500px;
     text-align: center;
     writing-mode: vertical-rl; 
     white-space: nowrap; 
     bottom: 5px;  
-    color: rgb(224, 26, 26); 
+    border: 0px solid black;
+    transform: scale(2, 1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 
 }
 
-#myimg {
-    width: 1650px;
-    height: 3200px;
-}
+
