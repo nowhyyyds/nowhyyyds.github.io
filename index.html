@@ -5,6 +5,18 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="css/1.css" rel="stylesheet">
     <title>经贸码</title>
+    <script>
+  let colors = ['red', 'green', 'black'];
+        let index = 0;
+        setInterval(function() {
+            let text = document.getElementById('text');
+            text.style.color = colors[index];
+            index = (index + 1) % colors.length;
+        }, 1000); // 2秒切换一次颜色
+
+    </script>
+
+
 </head>
 
 <body>
