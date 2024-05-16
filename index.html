@@ -2,34 +2,40 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
     <title>经贸码</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .out {
             position: relative;
-            width: 100%; /* 宽度设置为100%，以适应不同尺寸的屏幕 */
+            width: 100%;
             background-color: rgb(247, 248, 249);
             margin: 0 auto;
+            overflow: hidden; /* 隐藏溢出的内容 */
         }
 
         .outout {
-            position: relative; /* 相对定位 */
+            position: relative;
             z-index: 1;
         }
 
         .outout img {
-            width: 100%; /* 图片宽度设置为父元素宽度的100% */
-            height: auto; /* 高度自适应 */
+            width: 100%;
+            height: auto;
         }
 
         .date {
-            transition: color ls;
+            transition: color 1s; /* 添加过渡效果 */
             position: absolute;
             z-index: 2;
-            font-size: 4vw; /* 使用vw单位，根据视口宽度调整字体大小 */
+            font-size: 3vw; /* 使用vw单位 */
             color: red;
-            top: 50%; /* 垂直居中 */
-            left: 50%; /* 水平居中 */
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%); /* 居中 */
             text-align: center;
             letter-spacing: 0.05em;
@@ -39,7 +45,7 @@
 
         @media only screen and (max-width: 768px) {
             .date {
-                font-size: 6vw; /* 在小屏幕上进一步调整字体大小 */
+                font-size: 5vw; /* 在小屏幕上调整字体大小 */
             }
         }
     </style>
@@ -48,7 +54,7 @@
 <body>
     <div class="out">
         <div class="outout">
-            <img src="6.png" width="100%" height="auto"> <!-- 将图片宽度设置为100%以适应屏幕 -->
+            <img src="6.png" alt="Image" width="100%" height="auto">
         </div>
         <strong class="date" id="text"><div id="dateTime"></div></strong>
     </div>
@@ -56,7 +62,7 @@
     <script>
         Date.prototype.format = function(fmt) {
             var o = {
-                "y+": this.getFullYear, //年
+                "y+": this.getFullYear(), //年
                 "M+": this.getMonth() + 1, //月份
                 "d+": this.getDate(), //日
                 "h+": this.getHours(), //小时
@@ -68,7 +74,9 @@
                 if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return fmt;
         }
-        setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+        setInterval(function() {
+            document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');
+        }, 1000);
     </script>
 </body>
 
