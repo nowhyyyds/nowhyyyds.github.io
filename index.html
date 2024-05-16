@@ -3,26 +3,56 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/1.css" rel="stylesheet">
     <title>经贸码</title>
-    <script>
-  let colors = ['red', 'green', 'black'];
-        let index = 0;
-        setInterval(function() {
-            let text = document.getElementById('text');
-            text.style.color = colors[index];
-            index = (index + 1) % colors.length;
-        }, 1000); // 2秒切换一次颜色
+    <style>
+        .out {
+            position: relative;
+            width: 100%; /* 宽度设置为100%，以适应不同尺寸的屏幕 */
+            background-color: rgb(247, 248, 249);
+            margin: 0 auto;
+        }
 
-    </script>
+        .outout {
+            position: relative; /* 相对定位 */
+            z-index: 1;
+        }
 
+        .outout img {
+            width: 100%; /* 图片宽度设置为父元素宽度的100% */
+            height: auto; /* 高度自适应 */
+        }
+
+        .date {
+            transition: color ls;
+            position: absolute;
+            z-index: 2;
+            font-size: 4vw; /* 使用vw单位，根据视口宽度调整字体大小 */
+            color: red;
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 居中 */
+            text-align: center;
+            letter-spacing: 0.05em;
+            writing-mode: vertical-rl;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .date {
+                font-size: 6vw; /* 在小屏幕上进一步调整字体大小 */
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="out">
-        <div class="outout"> <img src="6.png" width="1500" height="fit"></div>
-         <div style="float: right;"><strong class="date" id="text"><div id="dateTime"></div></strong></div>
+        <div class="outout">
+            <img src="6.png" width="100%" height="auto"> <!-- 将图片宽度设置为100%以适应屏幕 -->
+        </div>
+        <strong class="date" id="text"><div id="dateTime"></div></strong>
     </div>
+
     <script>
         Date.prototype.format = function(fmt) {
             var o = {
@@ -40,8 +70,6 @@
         }
         setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
     </script>
-
-
 </body>
 
 </html>
