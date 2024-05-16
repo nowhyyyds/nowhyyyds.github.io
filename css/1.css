@@ -1,4 +1,3 @@
-
 .out {
     position: relative;
     width: 100%; /* 将宽度设置为100%，以适应不同屏幕尺寸 */
@@ -39,4 +38,3 @@
         margin-top: 5vw; /* 调整上外边距 */
     }
 }
-
